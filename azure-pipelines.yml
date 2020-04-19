@@ -1,0 +1,13 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo Change init.sh
+  displayName: 'Change the init script'
+- bash: sudo chmod +x init.sh
+- script: echo Run init.sh
+  displayName: 'Run the init script'
+- bash: sudo ./init.sh
